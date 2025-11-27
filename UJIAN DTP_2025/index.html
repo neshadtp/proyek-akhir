@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar container">
+            <div class="logo">CineZone</div>
+                <nav>
+                    <a href="#" data-target="Home">Home</a>
+                    <a href="#" data-target="Trending">Trending</a>
+                    <input type="text" id="searchInput" placeholder="Search movie...">
+                    <button id="backBtn" style="display:none; margin-left:10px;">Back</button>
+                    <a href="#" data-target="New Release">New Release</a>
+                    <a href="#" data-target="Comments">Comments</a>
+                </nav>
+</header>
+
+    <!-- HERO BANNER -->
+    <section class="hero"id="Home">
+        <div class="hero-content">
+            <h1>Explore Endless <br> Movies And Shows Worldwide</h1>
+            <p>Discover amazing movies and shows from around the world, bringing endless entertainment to your screen.</p>
+            <button class="btn-primary">Learn More</button>
+        </div>
+    </section>
+
+    <!-- TRENDING SECTION -->
+    <section class="section container" id="Trending">
+        <div class="section-header">
+            <h2>Trending</h2>
+        </div>
+
+        <div class="movie-grid">
+            <!-- JavaScript akan menambahkan movie-card di sini -->
+        </div>
+    </section>
+
+    <!-- NEW RELEASE SECTION -->
+    <section class="section container" id="New Release">
+        <div class="section-header">
+            <h2>New Release - Movies</h2>
+        </div>
+
+        <div class="movie-grid">
+             <!-- JavaScript akan menambahkan movie-card di sini -->
+        </div>
+    </section>
+
+    <!-- Comment Section -->
+    <section class="comments container"id="Comments">
+        <h2>Comments</h2>
+
+    <!-- Input Comment -->
+    <div class="comment-input">
+        <img src="profile.jfif" alt="User" class="profile-pic">
+        <input type="text" placeholder="Write your comment here...">
+    </div>
+
+    <!-- Comment List -->
+    <div class="comment-list" id="commentList">
+        <div class="comment-card">
+            <img src="profile.jfif" class="comment-pic">
+            <p><strong>Nesha445</strong>: that was perfect</p>
+        </div>
+        <div class="comment-card">
+            <img src="profile.jfif" class="comment-pic">
+            <p><strong>Wilton</strong>: amazing result!</p>
+        </div>
+        <div class="comment-card">
+            <img src="profile.jfif" class="comment-pic">
+            <p><strong>Aashavon100</strong>: so cool!</p>
+        </div>
+        <div class="comment-card">
+            <img src="profile.jfif" class="comment-pic">
+            <p><strong>Julia</strong>: love this!</p>
+        </div>
+        <div class="comment-card">
+            <img src="profile.jfif" class="comment-pic">
+            <p><strong>Raven</strong>: keep it up!</p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-logo">CineZone</div>
+
+    <p class="footer-tagline">Your gateway to movies and entertainment worldwide.</p>
+
+    <div class="footer-social">
+        <a href="#"><img src="facebook.png" alt="facebook"></a>
+        <a href="#"><img src="instagram.png" alt="instagram"></a>
+        <a href="#"><img src="linkedin.png" alt="linkedin"></a>
+        <a href="#"><img src="youtube.png" alt="youtube"></a>
+        <a href="#"><img src="telegram.png" alt="telegram"></a>
+    </div>
+
+    <p class="footer-copy">© 2025 CineZone. All rights reserved.</p>
+</footer>
+    <script src="movie.js"></script>
+</body>
+</html>

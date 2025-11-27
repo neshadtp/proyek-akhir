@@ -1,0 +1,354 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: white;
+}
+
+/* Pastikan TIDAK bisa scroll samping */
+html, body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+/* LOGO */
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.5px; /* ✅ Biar tidak terlihat bergerigi/garis */
+}
+
+/* MENU */
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* MENU TEXT */
+.navbar nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.3px; /* ✅ Font lebih smooth */
+}
+
+.navbar nav a:hover {
+    opacity: 0.7;
+}
+
+/* ✅ SEARCH NAV */
+.navbar input {
+    position: relative; /* pastikan di atas layer lain */
+    z-index: 10;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #fff;
+    width: 200px;
+}
+
+.navbar input:focus {
+    border-color: #007bff;
+}
+
+/* LOGIN */
+.login {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+}
+
+
+/* HERO BANNER */
+.hero {
+    position: relative;
+    height: 50vh; /* SETENGAH HALAMAN */
+    width: 100%;
+    background-image: url("UTS Wicked poster.jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45); /* efek gelap */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 450px;
+    margin-top: 40px; /* ✅ dari 90px jadi 40px */
+}
+
+.hero h1 {
+    font-size: 32px;   /* ✅ diperkecil */
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.hero p {
+    font-size: 13px;   /* ✅ diperkecil */
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+.hero button {
+    padding: 10px 20px; /* ✅ tombol lebih kecil */
+    font-size: 13px;
+    border-radius: 6px;
+}
+
+
+.btn-primary {
+    background: red;
+    padding: 12px 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+/* SEARCH */
+.search-box {
+    display: flex;
+    justify-content: center; 
+    padding: 18px;
+}
+.search-box input {
+    width: 80%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    background: #1c1c1c;
+    color: white;
+}
+
+/* SECTION */
+.section {
+    padding: 20px 40px;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.section-header a {
+    color: #4ea3ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* MOVIE GRID */
+.movie-card {
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.movie-card .popup-info {
+    position: absolute;
+    bottom: 100%; /* muncul di atas poster */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+    padding: 8px;
+    width: 180px;
+    border-radius: 6px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    text-align: center;
+}
+
+.movie-card:hover .popup-info {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.review-card {
+    background: #1c1c1c;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.review-card h4 {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+}
+
+.review-card p {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+.comments {
+    margin-top: 40px;
+    padding-left: 60px; /* ✅ dorong ke kiri seperti container lain */
+    padding-right: 0;
+    width: 100%;
+}
+
+/* ✅ Kolom input tetap kiri */
+.comment-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 45%; /* ✅ tidak full */
+    margin: 0; /* ✅ hapus efek tengah */
+}
+
+/* ✅ Card menyamping & rata kiri */
+.comment-list {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 20px;
+    justify-content: flex-start; /* ✅ ratain kiri */
+}
+
+/* ✅ Card lebih besar & kiri */
+.comment-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff; /* ✅ Biru */
+    padding: 14px;
+    border-radius: 10px;
+    width: 180px; /* ✅ agak besar */
+    color: rgb(20, 20, 20);
+    font-size: 14px;
+}
+
+.comment-card img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.comment-input img {
+    width: 45px;       /* ukuran avatar */
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%; /* biar bulat */
+    margin-right: 10px; /* kasih jarak dari input */
+}
+
+.comment-pic {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.footer {
+    background: #0d0d0d;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 60px;
+}
+
+.footer-logo {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.footer-social img {
+    width: 32px;
+    height: 32px;
+    filter: transparent; /* jadi putih biar cocok tema */
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.footer-social img:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: #777;
+    margin-top: 10px;
+}
+
+#backBtn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+#backBtn:hover {
+    background-color: red;
+}
+
